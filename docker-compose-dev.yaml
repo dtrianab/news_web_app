@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  python-dev-app: 
+    #build: .
+    image: my-py-image:0.0.1
+    ports:
+    - 5000:5000
+    volumes:
+      - ./src:/app
+    environment: 
+      - FLASK_ENV=development  
